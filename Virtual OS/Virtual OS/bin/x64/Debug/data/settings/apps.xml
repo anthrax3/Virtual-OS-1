@@ -1,0 +1,13 @@
+<apps>
+  <app>
+    <name>Settings</name>
+    <open>settings.open()</open>
+    <publisher>Bogdan</publisher>
+  </app>
+
+  <app>
+    <name>Test HTML App</name>
+    <open>run(index.html)</open>
+    <publisher>test INC</publisher>
+  </app>
+</apps>

@@ -1,0 +1,145 @@
+[0416/120109:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0416/120109:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0416/120109:WARNING:channel.cc(359)] RawChannel write error
+[0416/120228:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0416/120228:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0416/120228:WARNING:channel.cc(359)] RawChannel write error
+[0416/122105:FATAL:hwnd_util.cc(65)] : The parameter is incorrect. (0x57)
+[0416/122312:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0416/122312:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0416/122312:WARNING:channel.cc(359)] RawChannel write error
+[0416/122443:FATAL:hwnd_util.cc(65)] : The parameter is incorrect. (0x57)
+[0416/122504:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0416/122504:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0416/122504:WARNING:channel.cc(359)] RawChannel write error
+[0416/124541:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0416/124541:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0416/124541:WARNING:channel.cc(359)] RawChannel write error
+[0416/124608:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0416/124608:WARNING:channel.cc(359)] RawChannel write error
+[0416/124608:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0416/124906:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0416/124906:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0416/124906:WARNING:channel.cc(359)] RawChannel write error
+[0416/125004:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0416/125004:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0416/125004:WARNING:channel.cc(359)] RawChannel write error
+[0416/125130:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0416/125130:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0416/125130:WARNING:channel.cc(359)] RawChannel write error
+[0416/125401:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0416/125401:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0416/125401:WARNING:channel.cc(359)] RawChannel write error
+[0416/125559:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0416/125559:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0416/125559:WARNING:channel.cc(359)] RawChannel write error
+[0416/125628:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0416/125628:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0416/125628:WARNING:channel.cc(359)] RawChannel write error
+[0416/125830:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0416/125830:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0416/125830:WARNING:channel.cc(359)] RawChannel write error
+[0416/125900:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0416/125900:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0416/125900:WARNING:channel.cc(359)] RawChannel write error
+[0416/130023:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0416/130023:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0416/130023:WARNING:channel.cc(359)] RawChannel write error
+[0416/130627:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0416/130627:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0416/130627:WARNING:channel.cc(359)] RawChannel write error
+[0416/130837:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0416/130837:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0416/130837:WARNING:channel.cc(359)] RawChannel write error
+[0416/131954:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0416/131954:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0416/131954:WARNING:channel.cc(359)] RawChannel write error
+[0416/132310:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0416/132310:WARNING:channel.cc(359)] RawChannel write error
+[0416/132310:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0416/132740:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0416/132930:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0416/132930:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0416/132930:WARNING:channel.cc(359)] RawChannel write error
+[0417/005308:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0417/005308:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0417/005308:WARNING:channel.cc(359)] RawChannel write error
+[0417/005337:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0417/005337:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0417/005337:WARNING:channel.cc(359)] RawChannel write error
+[0417/005905:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0417/005905:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0417/005905:WARNING:channel.cc(359)] RawChannel write error
+[0417/010250:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0417/010250:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0417/010250:WARNING:channel.cc(359)] RawChannel write error
+[0417/010253:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0417/010253:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0417/010253:WARNING:channel.cc(359)] RawChannel write error
+[0417/010309:ERROR:browser_host_impl.cc(1411)] Invalid URL passed to CefBrowserHostImpl::LoadURL: 127.0.0.1:8080
+[0417/010326:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0417/010326:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0417/010326:WARNING:channel.cc(359)] RawChannel write error
+[0417/014007:ERROR:gles2_cmd_decoder.cc(13414)] [.CommandBufferContext.RenderWorker-000000001D565A70]GL ERROR :GL_INVALID_VALUE : glCopySubTextureCHROMIUM: source texture has no level 0
+[0417/014007:ERROR:gles2_cmd_decoder.cc(13414)] [.CommandBufferContext.RenderWorker-000000001D565A70]GL ERROR :GL_INVALID_VALUE : glCopySubTextureCHROMIUM: source texture has no level 0
+[0417/014007:ERROR:gles2_cmd_decoder.cc(13414)] [.CommandBufferContext.RenderWorker-000000001D565A70]GL ERROR :GL_INVALID_VALUE : glCopySubTextureCHROMIUM: source texture has no level 0
+[0417/014007:ERROR:gles2_cmd_decoder.cc(13414)] [.CommandBufferContext.RenderWorker-000000001D565A70]GL ERROR :GL_INVALID_VALUE : glCopySubTextureCHROMIUM: source texture has no level 0
+[0417/014011:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0417/014011:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0417/014011:WARNING:channel.cc(359)] RawChannel write error
+[0417/015131:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0417/015131:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0417/015131:WARNING:channel.cc(359)] RawChannel write error
+[0417/015713:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0417/015713:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0417/015713:WARNING:channel.cc(359)] RawChannel write error
+[0417/020505:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0417/020505:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0417/020505:WARNING:channel.cc(359)] RawChannel write error
+[0417/025101:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0417/025101:WARNING:channel.cc(359)] RawChannel write error
+[0417/025925:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0417/025925:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0417/025925:WARNING:channel.cc(359)] RawChannel write error
+[0417/025932:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0417/025932:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0417/025932:WARNING:channel.cc(359)] RawChannel write error
+[0417/030322:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0417/030322:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0417/030322:WARNING:channel.cc(359)] RawChannel write error
+[0417/041004:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0417/041632:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0417/041632:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0417/041632:WARNING:channel.cc(359)] RawChannel write error
+[0417/041754:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0417/041754:WARNING:channel.cc(359)] RawChannel write error
+[0417/041754:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0417/043359:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0417/043359:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0417/043359:WARNING:channel.cc(359)] RawChannel write error
+[0417/043748:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0417/043748:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0417/043748:WARNING:channel.cc(359)] RawChannel write error
+[0417/043834:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0417/043834:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0417/043834:WARNING:channel.cc(359)] RawChannel write error
+[0417/045101:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0417/045101:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0417/045101:WARNING:channel.cc(359)] RawChannel write error
+[0417/045111:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0417/045111:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0417/045111:WARNING:channel.cc(359)] RawChannel write error
+[0417/045550:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0417/045550:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0417/045550:WARNING:channel.cc(359)] RawChannel write error
+[0417/052946:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0417/052946:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0417/052946:WARNING:channel.cc(359)] RawChannel write error
+[0417/060621:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0417/073828:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0417/073828:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0417/073828:WARNING:channel.cc(359)] RawChannel write error
+[0417/074704:ERROR:ipc_channel_win.cc(217)] pipe error: 109
+[0417/074704:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
+[0417/074704:WARNING:channel.cc(359)] RawChannel write error
+[0418/093655:WARNING:raw_channel_win.cc(532)] WriteFile: The pipe is being closed. (0xE8)
