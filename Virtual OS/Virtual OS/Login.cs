@@ -94,11 +94,12 @@ namespace Virtual_OS
 
         private void Done_Click(object sender, EventArgs e)
         {
+            // Create the XMLReader
             XmlDocument dataReader = new XmlDocument();
             dataReader.Load("data/user/info.xml");
 
             dataReader.SelectSingleNode("//data");
-
+             // Check if data is correct
             if (UsernameBox.Text == dataReader.SelectSingleNode("//username").InnerText && dataReader.SelectSingleNode("//password").InnerText == PasswordBox.Text)
             {
                 Virtual_OS.Main.MotherUI ms = new Virtual_OS.Main.MotherUI();
