@@ -92,7 +92,7 @@
             this.UsernameLabel.AutoSize = true;
             this.UsernameLabel.BackColor = System.Drawing.Color.Transparent;
             this.UsernameLabel.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.UsernameLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.UsernameLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.UsernameLabel.Location = new System.Drawing.Point(379, 210);
             this.UsernameLabel.Name = "UsernameLabel";
             this.UsernameLabel.Size = new System.Drawing.Size(78, 20);
@@ -100,13 +100,14 @@
             this.UsernameLabel.Text = "Username:";
             this.UsernameLabel.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.UsernameLabel.UseCustomBackColor = true;
+            this.UsernameLabel.UseCustomForeColor = true;
             // 
             // PasswordLabel
             // 
             this.PasswordLabel.AutoSize = true;
             this.PasswordLabel.BackColor = System.Drawing.Color.Transparent;
             this.PasswordLabel.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.PasswordLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.PasswordLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.PasswordLabel.Location = new System.Drawing.Point(379, 275);
             this.PasswordLabel.Name = "PasswordLabel";
             this.PasswordLabel.Size = new System.Drawing.Size(74, 20);
@@ -114,6 +115,7 @@
             this.PasswordLabel.Text = "Password:";
             this.PasswordLabel.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.PasswordLabel.UseCustomBackColor = true;
+            this.PasswordLabel.UseCustomForeColor = true;
             // 
             // ShowPass
             // 
@@ -133,7 +135,7 @@
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.BackColor = System.Drawing.Color.Transparent;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.metroLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.metroLabel1.Location = new System.Drawing.Point(625, 298);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(48, 20);
@@ -141,6 +143,7 @@
             this.metroLabel1.Text = "Show:";
             this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroLabel1.UseCustomBackColor = true;
+            this.metroLabel1.UseCustomForeColor = true;
             // 
             // UsernameBox
             // 
@@ -169,7 +172,7 @@
             this.RealNameLabel.AutoSize = true;
             this.RealNameLabel.BackColor = System.Drawing.Color.Transparent;
             this.RealNameLabel.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.RealNameLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.RealNameLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.RealNameLabel.Location = new System.Drawing.Point(379, 340);
             this.RealNameLabel.Name = "RealNameLabel";
             this.RealNameLabel.Size = new System.Drawing.Size(178, 20);
@@ -177,6 +180,7 @@
             this.RealNameLabel.Text = "Real Name And Surname:";
             this.RealNameLabel.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.RealNameLabel.UseCustomBackColor = true;
+            this.RealNameLabel.UseCustomForeColor = true;
             // 
             // SurnameBox
             // 
@@ -189,7 +193,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
+            this.BackColor = System.Drawing.Color.Gray;
             this.Controls.Add(this.SurnameBox);
             this.Controls.Add(this.NameBox);
             this.Controls.Add(this.RealNameLabel);
