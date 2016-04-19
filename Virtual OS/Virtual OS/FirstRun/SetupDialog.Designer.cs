@@ -66,7 +66,7 @@
             this.CopyInfo.BackColor = System.Drawing.Color.Transparent;
             this.CopyInfo.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.CopyInfo.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.CopyInfo.Location = new System.Drawing.Point(12, 9);
+            this.CopyInfo.Location = new System.Drawing.Point(285, 13);
             this.CopyInfo.Name = "CopyInfo";
             this.CopyInfo.Size = new System.Drawing.Size(483, 20);
             this.CopyInfo.Style = MetroFramework.MetroColorStyle.White;
