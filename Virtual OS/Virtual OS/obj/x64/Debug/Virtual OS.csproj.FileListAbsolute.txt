@@ -58,3 +58,6 @@ C:\Users\Pechyorin\Documents\GitHub\Virtual-OS\VOS\Virtual OS\Virtual OS\obj\x64
 C:\Users\Pechyorin\Documents\GitHub\Virtual-OS\VOS\Virtual OS\Virtual OS\obj\x64\Debug\Virtual OS.csproj.GenerateResource.Cache
 C:\Users\Pechyorin\Documents\GitHub\Virtual-OS\VOS\Virtual OS\Virtual OS\obj\x64\Debug\Virtual OS.exe
 C:\Users\Pechyorin\Documents\GitHub\Virtual-OS\VOS\Virtual OS\Virtual OS\obj\x64\Debug\Virtual OS.pdb
+C:\Users\Pechyorin\Documents\GitHub\Virtual-OS\Virtual OS\Virtual OS\bin\x64\Debug\Virtual OS.exe.config
+C:\Users\Pechyorin\Documents\GitHub\Virtual-OS\Virtual OS\Virtual OS\obj\x64\Debug\Virtual OS.exe
+C:\Users\Pechyorin\Documents\GitHub\Virtual-OS\Virtual OS\Virtual OS\obj\x64\Debug\Virtual OS.pdb
