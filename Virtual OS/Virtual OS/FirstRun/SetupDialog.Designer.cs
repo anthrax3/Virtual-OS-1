@@ -71,13 +71,14 @@
             this.CopyInfo.Size = new System.Drawing.Size(483, 20);
             this.CopyInfo.Style = MetroFramework.MetroColorStyle.White;
             this.CopyInfo.TabIndex = 4;
-            this.CopyInfo.Text = "Setup - VOS - Thanks For Using Virtual_OS! Hope you enjoy the 1.0 beta!";
+            this.CopyInfo.Text = "Setup - VOS - Thanks For Using Virtual OS! Hope you enjoy the 1.0 beta!";
             this.CopyInfo.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // Done
             // 
+            this.Done.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Done.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.Done.Location = new System.Drawing.Point(1029, 580);
+            this.Done.Location = new System.Drawing.Point(12, 580);
             this.Done.Name = "Done";
             this.Done.Size = new System.Drawing.Size(54, 51);
             this.Done.TabIndex = 7;
@@ -171,9 +172,9 @@
             this.RealNameLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.RealNameLabel.Location = new System.Drawing.Point(379, 340);
             this.RealNameLabel.Name = "RealNameLabel";
-            this.RealNameLabel.Size = new System.Drawing.Size(151, 20);
+            this.RealNameLabel.Size = new System.Drawing.Size(178, 20);
             this.RealNameLabel.TabIndex = 13;
-            this.RealNameLabel.Text = "Real Name & Surname:";
+            this.RealNameLabel.Text = "Real Name And Surname:";
             this.RealNameLabel.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.RealNameLabel.UseCustomBackColor = true;
             // 
