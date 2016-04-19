@@ -1,7 +1,11 @@
 ﻿/*
 Welcome to my new project, VOS / Virtual Operaring System!!!
 
-Copywrite 2016 Bogdan Pechyorin
+Copywrite 2016 Bogdan Pechyorin, Enjoy
+
+This project was published under the MIT liscence
+If any source code is used, Please credit me as 'Bogdan0804'!
+If you need any help, Feel free to ask!
 */
 
 using System;
@@ -20,6 +24,7 @@ namespace Virtual_OS
         [STAThread]
         static void Main()
         {
+            Console.Title = "Virtual OS!!!";
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Main.MotherUI());
