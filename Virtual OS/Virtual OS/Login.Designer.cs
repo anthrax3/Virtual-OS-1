@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.TopBar = new MetroFramework.Controls.MetroPanel();
+            this.CloseButton = new MetroFramework.Controls.MetroLink();
             this.SetUpLabel = new MetroFramework.Controls.MetroLink();
             this.TitleLabel = new MetroFramework.Controls.MetroLabel();
             this.Main = new BlueActivity.Controls.ColorWithAlpha();
@@ -44,7 +45,6 @@
             this.UsernameBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Main2 = new BlueActivity.Controls.ColorWithAlpha();
-            this.CloseButton = new MetroFramework.Controls.MetroLink();
             this.TopBar.SuspendLayout();
             this.metroPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -68,6 +68,18 @@
             this.TopBar.VerticalScrollbarBarColor = false;
             this.TopBar.VerticalScrollbarHighlightOnWheel = false;
             this.TopBar.VerticalScrollbarSize = 10;
+            // 
+            // CloseButton
+            // 
+            this.CloseButton.AutoSize = true;
+            this.CloseButton.Location = new System.Drawing.Point(913, 9);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(82, 27);
+            this.CloseButton.TabIndex = 4;
+            this.CloseButton.Text = "Close";
+            this.CloseButton.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.CloseButton.UseSelectable = true;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
             // SetUpLabel
             // 
@@ -139,7 +151,7 @@
             this.CopyInfo.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.CopyInfo.Location = new System.Drawing.Point(12, 9);
             this.CopyInfo.Name = "CopyInfo";
-            this.CopyInfo.Size = new System.Drawing.Size(482, 20);
+            this.CopyInfo.Size = new System.Drawing.Size(484, 20);
             this.CopyInfo.Style = MetroFramework.MetroColorStyle.White;
             this.CopyInfo.TabIndex = 4;
             this.CopyInfo.Text = "Login - VOS - Thanks For Using Virtual_OS! Hope you enjoy the 1.0 beta!";
@@ -242,18 +254,6 @@
             this.Main2.Alpha = 200;
             this.Main2.Color = System.Drawing.Color.DimGray;
             this.Main2.Parent = null;
-            // 
-            // CloseButton
-            // 
-            this.CloseButton.AutoSize = true;
-            this.CloseButton.Location = new System.Drawing.Point(913, 9);
-            this.CloseButton.Name = "CloseButton";
-            this.CloseButton.Size = new System.Drawing.Size(82, 27);
-            this.CloseButton.TabIndex = 4;
-            this.CloseButton.Text = "Close";
-            this.CloseButton.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.CloseButton.UseSelectable = true;
-            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
             // Login
             // 
