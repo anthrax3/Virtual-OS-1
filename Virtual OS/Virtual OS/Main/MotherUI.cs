@@ -16,8 +16,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 
-
-// LOL
 namespace Virtual_OS.Main
 {
     public partial class MotherUI : Form
