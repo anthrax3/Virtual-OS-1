@@ -27,7 +27,7 @@ namespace Virtual_OS
             Console.Title = "Virtual OS!!!";
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main.MotherUI());
+            Application.Run(new MainSource.MotherUI());
         }
     }
 }
