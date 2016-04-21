@@ -45,7 +45,7 @@ namespace Virtual_OS.Main
             PersonName = name;
             LastName = surname;
 
-            WelcomeLabel.Text = $"Welcome, {PersonName} {LastName}!";
+            WelcomeLabel.Text = $"Welcome, Mr. {PersonName} {LastName}!";
 
             this.Load += MotherUI_Load;
 
