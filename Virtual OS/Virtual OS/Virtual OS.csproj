@@ -190,25 +190,27 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main\MainAppClass.cs">
+    <Compile Include="MainSource\JSMeth\IntHandler.cs" />
+    <Compile Include="MainSource\JSMeth\JSCoreSystem.cs" />
+    <Compile Include="MainSource\JSMeth\JSCoreSystemIO.cs" />
+    <Compile Include="MainSource\MainAppClass.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main\MainAppClass.Designer.cs">
+    <Compile Include="MainSource\MainAppClass.Designer.cs">
       <DependentUpon>MainAppClass.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main\MotherUI.cs">
+    <Compile Include="MainSource\MotherUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main\MotherUI.Designer.cs">
+    <Compile Include="MainSource\MotherUI.Designer.cs">
       <DependentUpon>MotherUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main\Settings.cs">
+    <Compile Include="MainSource\Settings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main\Settings.Designer.cs">
+    <Compile Include="MainSource\Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main\VOSCode.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FirstRun\SetupDialog.resx">
@@ -217,13 +219,13 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main\MainAppClass.resx">
+    <EmbeddedResource Include="MainSource\MainAppClass.resx">
       <DependentUpon>MainAppClass.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main\MotherUI.resx">
+    <EmbeddedResource Include="MainSource\MotherUI.resx">
       <DependentUpon>MotherUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main\Settings.resx">
+    <EmbeddedResource Include="MainSource\Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
