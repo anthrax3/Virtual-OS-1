@@ -16,7 +16,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 
-namespace Virtual_OS.Main
+namespace Virtual_OS.MainSource
 {
     public partial class MotherUI : Form
     {
@@ -53,7 +53,7 @@ namespace Virtual_OS.Main
             LoadApps();
 
 			  // A small dpi issue fix
-            Main.MainAppClass mainApp = new MainAppClass("");
+            MainAppClass mainApp = new MainAppClass("");
 
             mainApp.MdiParent = this;
             mainApp.Visible = true;
@@ -154,24 +154,16 @@ namespace Virtual_OS.Main
         {
 
             string fileData = "file://" + System.Environment.CurrentDirectory.Replace(@"\", "/") + "/applications/" + name + " - By " + pub + "/" + file;
-            Main.MainAppClass mainApp = new MainAppClass(fileData);
+            MainAppClass mainApp = new MainAppClass(fileData);
 
             mainApp.MdiParent = this;
 
 
             HtmlAgilityPack.HtmlDocument htmlDoc = new HtmlAgilityPack.HtmlDocument();
             htmlDoc.Load(System.Environment.CurrentDirectory.Replace(@"\", "/") + "/applications/" + name + " - By " + pub + "/" + file);
-
-
+            
             try
             {
-                foreach (HtmlAgilityPack.HtmlAttribute item in htmlDoc.DocumentNode.SelectSingleNode("//body").Attributes)
-                {
-                    if (item.Name == "struct")
-                    {
-
-                    }
-                }
                 foreach (HtmlAgilityPack.HtmlNode noder in htmlDoc.DocumentNode.SelectNodes("//import"))
                 {
                     string atri = noder.GetAttributeValue("data", "");
@@ -182,7 +174,7 @@ namespace Virtual_OS.Main
                     }
                     else if (atri == "System.IO")
                     {
-                        mainApp.WebUI.RegisterJsObject("IO", new JSCoreSystemIO(), false);
+                        mainApp.WebUI.RegisterJsObject("IO", new MainSource.JSCoreIO(), false);
                     }
                     else
                     {
@@ -235,47 +227,8 @@ namespace Virtual_OS.Main
                 throw new Exception("Mission failed!");
             return results;
         }
-        public class JSCoreSystem
-        {
-            public string Username { get; }
-            public string GetApplicationVersion()
-            {
-                return "0.2.1.5";
-            }
-
-            public JSCoreSystem(string _username)
-            {
-                Username = _username;
-            }
-        }
-        public class JSCoreSystemIO
-        {
-            public string ReadAllText(string file)
-            {
-                string retVal = "";
-                try { retVal = System.IO.File.ReadAllText(file); }
-                catch (Exception e) { retVal = e.ToString(); }
-
-                return retVal;
-            }
-
-            public bool WriteAllText(string filename, string content)
-            {
-                bool retVal = false;
-                try
-                {
-                    System.IO.File.WriteAllText(filename, content);
-
-                    retVal = true;
-                }
-                catch
-                {
-                    retVal = false;
-                }
-                return retVal;
-            }
-
-        }
+        
+        
 
         private void AppsGrid_DoubleClick(object sender, EventArgs e)
         {
@@ -313,7 +266,7 @@ namespace Virtual_OS.Main
 
         private void ShowDevToolsBtn_Click(object sender, EventArgs e)
         {
-            Main.MainAppClass p = new MainAppClass("http://127.0.0.1:8080/");
+            MainAppClass p = new MainAppClass("http://127.0.0.1:8080/");
             p.MdiParent = this;
             p.Show();
         }
