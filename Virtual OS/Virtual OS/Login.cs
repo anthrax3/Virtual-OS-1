@@ -102,7 +102,7 @@ namespace Virtual_OS
              // Check if data is correct
             if (UsernameBox.Text == dataReader.SelectSingleNode("//username").InnerText && dataReader.SelectSingleNode("//password").InnerText == PasswordBox.Text)
             {
-                Virtual_OS.Main.MotherUI ms = new Virtual_OS.Main.MotherUI();
+                Virtual_OS.MainSource.MotherUI ms = new Virtual_OS.MainSource.MotherUI();
                 ms.Show();
                 this.Hide();
 
