@@ -53,7 +53,7 @@ namespace Virtual_OS.Main
 
             LoadApps();
 
-
+			  // A small dpi issue fix
             Main.MainAppClass mainApp = new MainAppClass("");
 
             mainApp.MdiParent = this;
