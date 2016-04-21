@@ -44,7 +44,7 @@ namespace Virtual_OS.Main
             PersonName = name;
             LastName = surname;
 
-            WelcomeLabel.Text = $"Welcome, {PersonName} {LastName}!";
+            WelcomeLabel.Text = $"Welcome, Mr. {PersonName} {LastName}!";
 
             this.Load += MotherUI_Load;
 
@@ -52,7 +52,7 @@ namespace Virtual_OS.Main
 
             LoadApps();
 
-
+			  // A small dpi issue fix
             Main.MainAppClass mainApp = new MainAppClass("");
 
             mainApp.MdiParent = this;
@@ -66,6 +66,7 @@ namespace Virtual_OS.Main
             XmlDocument appsReader = new XmlDocument();
             appsReader.Load("data/settings/apps.xml");
             appsReader.SelectNodes("//apps");
+			  AppsGrid.Items.Clear();
 
             for (int i = 0; i < appsReader.SelectNodes("//app").Count; i++)
             {
