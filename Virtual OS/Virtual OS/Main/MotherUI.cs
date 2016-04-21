@@ -67,6 +67,7 @@ namespace Virtual_OS.Main
             XmlDocument appsReader = new XmlDocument();
             appsReader.Load("data/settings/apps.xml");
             appsReader.SelectNodes("//apps");
+			  AppsGrid.Items.Clear();
 
             for (int i = 0; i < appsReader.SelectNodes("//app").Count; i++)
             {
