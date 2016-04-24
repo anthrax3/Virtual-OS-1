@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Speech.Recognition;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -27,8 +28,18 @@ namespace Virtual_OS.MainSource
             InitializeComponent();
 
             TopBar.MouseMove += TopBar_MouseMove;
+            TitleLabel.MouseMove += TopBar_MouseMove;
+            
 
-            // Setup.UseSelectable = false;
+            this.Load += Settings_Load;
+        }
+
+        private void Settings_Load(object sender, EventArgs e)
+        {
+            Transitions.Transition t = new Transitions.Transition(new Transitions.TransitionType_Acceleration(1000));
+            t.add(CloseButton, "Left", 540);
+            t.add(TitleLabel, "Top", 10);
+            t.run();
         }
 
         private void TopBar_MouseMove(object sender, MouseEventArgs e)
@@ -38,15 +49,6 @@ namespace Virtual_OS.MainSource
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
-        }
-
-        private void ExitAppBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Setup_Click(object sender, EventArgs e)
-        {
         }
 
         private void CloseButton_Click(object sender, EventArgs e)

@@ -38,7 +38,6 @@ namespace Virtual_OS.MainSource
             this.WelcomeLabel = new System.Windows.Forms.Label();
             this.ShowDevToolsBtn = new MetroFramework.Controls.MetroButton();
             this.SetupBtn = new MetroFramework.Controls.MetroButton();
-            this.SettingsButton = new MetroFramework.Controls.MetroButton();
             this.ExitBtn = new MetroFramework.Controls.MetroButton();
             this.HubSplitter = new System.Windows.Forms.Splitter();
             this.VolumePanel = new System.Windows.Forms.Panel();
@@ -104,7 +103,6 @@ namespace Virtual_OS.MainSource
             this.Hub.Controls.Add(this.WelcomeLabel);
             this.Hub.Controls.Add(this.ShowDevToolsBtn);
             this.Hub.Controls.Add(this.SetupBtn);
-            this.Hub.Controls.Add(this.SettingsButton);
             this.Hub.Controls.Add(this.ExitBtn);
             this.Hub.Controls.Add(this.HubSplitter);
             this.Hub.HorizontalScrollbarBarColor = true;
@@ -129,6 +127,7 @@ namespace Virtual_OS.MainSource
             this.AppsGrid.TabIndex = 11;
             this.AppsGrid.UseCompatibleStateImageBehavior = false;
             this.AppsGrid.View = System.Windows.Forms.View.Tile;
+            this.AppsGrid.SelectedIndexChanged += new System.EventHandler(this.AppsGrid_SelectedIndexChanged);
             this.AppsGrid.DoubleClick += new System.EventHandler(this.AppsGrid_DoubleClick);
             // 
             // WelcomeLabel
@@ -143,10 +142,10 @@ namespace Virtual_OS.MainSource
             // 
             // ShowDevToolsBtn
             // 
-            this.ShowDevToolsBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.ShowDevToolsBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ShowDevToolsBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.ShowDevToolsBtn.Location = new System.Drawing.Point(341, 292);
+            this.ShowDevToolsBtn.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.ShowDevToolsBtn.Location = new System.Drawing.Point(341, 388);
             this.ShowDevToolsBtn.Name = "ShowDevToolsBtn";
             this.ShowDevToolsBtn.Size = new System.Drawing.Size(142, 42);
             this.ShowDevToolsBtn.TabIndex = 9;
@@ -157,9 +156,9 @@ namespace Virtual_OS.MainSource
             // 
             // SetupBtn
             // 
-            this.SetupBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.SetupBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.SetupBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.SetupBtn.FontSize = MetroFramework.MetroButtonSize.Medium;
             this.SetupBtn.Location = new System.Drawing.Point(341, 340);
             this.SetupBtn.Name = "SetupBtn";
             this.SetupBtn.Size = new System.Drawing.Size(142, 42);
@@ -169,25 +168,11 @@ namespace Virtual_OS.MainSource
             this.SetupBtn.UseSelectable = true;
             this.SetupBtn.Click += new System.EventHandler(this.SetupBtn_Click);
             // 
-            // SettingsButton
-            // 
-            this.SettingsButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.SettingsButton.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.SettingsButton.Location = new System.Drawing.Point(341, 388);
-            this.SettingsButton.Name = "SettingsButton";
-            this.SettingsButton.Size = new System.Drawing.Size(142, 42);
-            this.SettingsButton.TabIndex = 9;
-            this.SettingsButton.Text = "Settings";
-            this.SettingsButton.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.SettingsButton.UseSelectable = true;
-            this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
-            // 
             // ExitBtn
             // 
-            this.ExitBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.ExitBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ExitBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.ExitBtn.FontSize = MetroFramework.MetroButtonSize.Medium;
             this.ExitBtn.Location = new System.Drawing.Point(341, 436);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(142, 42);
@@ -217,7 +202,6 @@ namespace Virtual_OS.MainSource
             this.VolumePanel.Name = "VolumePanel";
             this.VolumePanel.Size = new System.Drawing.Size(297, 111);
             this.VolumePanel.TabIndex = 4;
-            this.VolumePanel.Visible = false;
             // 
             // VolumeLabel
             // 
@@ -248,9 +232,9 @@ namespace Virtual_OS.MainSource
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1306, 782);
-            this.Controls.Add(this.VolumePanel);
             this.Controls.Add(this.Hub);
             this.Controls.Add(this.TopPanel);
+            this.Controls.Add(this.VolumePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
             this.Name = "MotherUI";
@@ -276,7 +260,6 @@ namespace Virtual_OS.MainSource
         private System.Windows.Forms.Splitter HubSplitter;
         private MetroButton ExitBtn;
         private System.Windows.Forms.Label WelcomeLabel;
-        private MetroButton SettingsButton;
         private MetroButton SetupBtn;
         private System.Windows.Forms.Panel VolumePanel;
         private MetroTrackBar VolumeBar;

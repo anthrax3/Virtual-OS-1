@@ -1,4 +1,5 @@
-﻿using Microsoft.CSharp;
+﻿using CefSharp;
+using Microsoft.CSharp;
 using System;
 using System.CodeDom.Compiler;
 using System.Collections;
@@ -22,6 +23,9 @@ namespace Virtual_OS.MainSource
     {
         public string PersonName { get; set; }
         public string LastName { get; set; }
+
+        private bool hubVisible = false;
+        private bool volVisible = false;
 
         public MotherUI()
         {
@@ -48,7 +52,8 @@ namespace Virtual_OS.MainSource
 
             this.Load += MotherUI_Load;
 
-            Hub.Size = new Size(0, 0);
+            VolumeLabel.UseSelectable = false;
+            VolumeBar.UseSelectable = false;
 
             LoadApps();
 
@@ -59,6 +64,10 @@ namespace Virtual_OS.MainSource
             mainApp.Visible = true;
 
             mainApp.Close();
+
+            // Reset the on-Screen-Controls...
+            Hub.Left = -500;
+            VolumePanel.Top = -100;
         }
 
         public void LoadApps()
@@ -96,10 +105,20 @@ namespace Virtual_OS.MainSource
 
         private void HubButton_Click(object sender, EventArgs e)
         {
-            if (Hub.Size == new Size(483, 478))
-                Hub.Size = new Size(0, 0);
+            if (hubVisible)
+            {
+                Transitions.Transition t = new Transitions.Transition(new Transitions.TransitionType_Deceleration(1000));
+                t.add(Hub, "Left", -500);
+                t.run();
+                hubVisible = !hubVisible;
+            }
             else
-                Hub.Size = new Size(483, 478);
+            {
+                Transitions.Transition t = new Transitions.Transition(new Transitions.TransitionType_Deceleration(1000));
+                t.add(Hub, "Left", 12);
+                t.run();
+                hubVisible = !hubVisible;
+            }
         }
 
         private void CloseApp(object sender, EventArgs e)
@@ -110,29 +129,14 @@ namespace Virtual_OS.MainSource
 
         private void SettingsButton_Click(object sender, EventArgs e)
         {
-            Settings s = new Settings();
-            s.Owner = this;
-            s.MdiParent = this;
-            s.Show();
+            
         }
 
         private void MotherUI_Paint(object sender, PaintEventArgs e)
         {
-            // base.OnPaint(e);
-            bool glassEnabled = true;
-            if (glassEnabled) // draw glass if enabled
-            {
-                Rectangle rc = new Rectangle(new Point(0, 0), new Size(this.Width, this.Height));
-                e.Graphics.ReleaseHdc();
-                e.Graphics.DrawRectangle(new Pen(Color.Red), rc);
-            }
+            
         }
-
-        /// <summary>
-        /// Show the setup
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        
         private void SetupBtn_Click(object sender, EventArgs e)
         {
 
@@ -142,7 +146,20 @@ namespace Virtual_OS.MainSource
 
         private void VolumeBtn_Click(object sender, EventArgs e)
         {
-            VolumePanel.Visible = !VolumePanel.Visible;
+            if (volVisible)
+            {
+                Transitions.Transition t = new Transitions.Transition(new Transitions.TransitionType_Deceleration(1000));
+                t.add(VolumePanel, "Top", -100);
+                t.run();
+                volVisible = !volVisible;
+            }
+            else
+            {
+                Transitions.Transition t = new Transitions.Transition(new Transitions.TransitionType_Deceleration(1000));
+                t.add(VolumePanel, "Top", 50);
+                t.run();
+                volVisible = !volVisible;
+            }
         }
 
         private void VolumeBar_ValueChanged(object sender, ScrollEventArgs e)
@@ -152,7 +169,6 @@ namespace Virtual_OS.MainSource
         }
         private void RunAppFromHTMLFile(string file, string name, string pub)
         {
-
             string fileData = "file://" + System.Environment.CurrentDirectory.Replace(@"\", "/") + "/applications/" + name + " - By " + pub + "/" + file;
             MainAppClass mainApp = new MainAppClass(fileData);
 
@@ -170,30 +186,15 @@ namespace Virtual_OS.MainSource
                     // Add the imports
                     if (atri == "System")
                     {
-                        mainApp.WebUI.RegisterJsObject("System", new JSCoreSystem(PersonName + " " + LastName), false);
+                        mainApp.WebUI.RegisterJsObject("System", new JSCoreSystem(), false);
                     }
                     else if (atri == "System.IO")
                     {
                         mainApp.WebUI.RegisterJsObject("IO", new MainSource.JSCoreIO(), false);
                     }
-                    else
+                    else if (atri == "System.Values")
                     {
-                        string xdm = "file://" + System.Environment.CurrentDirectory.Replace(@"\", "/") + "/applications/" + name + " - By " + pub + "/" + atri;
-                        string source = File.ReadAllText(System.Environment.CurrentDirectory + @"\applications\" + name + " - By " + pub + @"\" + atri);
-                        foreach (string line in source.Split(';'))
-                        {
-                            if (line.StartsWith("this."))
-                            {
-                                string cont = line.Split('.')[1];
-                                if (cont.StartsWith("visible"))
-                                {
-                                    bool isVisible = Convert.ToBoolean(cont.Replace(" ", "").Split('=')[1]);
-                                    mainApp.Visible = isVisible;
-                                }
-
-                            }
-                        }
-
+                        mainApp.WebUI.RegisterJsObject("Values", new Values(PersonName + LastName, PersonName, LastName), false);
                     }
                     this.WindowState = FormWindowState.Maximized;
                 }
@@ -202,8 +203,21 @@ namespace Virtual_OS.MainSource
             {
                 MessageBox.Show(e.ToString());
             }
+            mainApp.Visible = true;
 
+        }
+        public class Values
+        {
+            public string Username { get; }
+            public string LastName { get; }
+            public string FirstName { get; }
 
+            public Values(string username, string name, string surname)
+            {
+                Username = username;
+                LastName = surname;
+                FirstName = name;
+            }
         }
         private CompilerResults CompileCode(string codeToCompile)
         {
@@ -251,7 +265,10 @@ namespace Virtual_OS.MainSource
                             string openCode = appsReader.SelectNodes("//open")[i].InnerText;
                             if (openCode == "settings.open()")
                             {
-                                new Settings() { MdiParent = this }.Visible = true;
+                                Settings s = new Settings();
+                                s.Owner = this;
+                                s.MdiParent = this;
+                                s.Show();
                             }
                             else if (openCode.StartsWith("run"))
                             {
@@ -269,6 +286,62 @@ namespace Virtual_OS.MainSource
             MainAppClass p = new MainAppClass("http://127.0.0.1:8080/");
             p.MdiParent = this;
             p.Show();
+            
+        }
+        
+        public void InstallApp()
+        {
+            OpenFileDialog op = new OpenFileDialog();
+            if (op.ShowDialog() == DialogResult.OK)
+            {
+                string nameFile = new Random().Next(0, 9999).ToString();
+                Directory.CreateDirectory(nameFile);
+
+                System.IO.Compression.ZipFile.ExtractToDirectory(op.FileName, nameFile);
+                String[] data = File.ReadAllText(nameFile + "/app.txt").Split(',');
+
+                string appname = $"{data[0]} - By {data[1]}";
+
+                Directory.CreateDirectory("applications/" + appname);
+
+                if (File.Exists(appname + "/index.html"))
+                    File.Delete(appname + "/index.html");
+
+                File.Copy(nameFile + "/index.html", "applications/" + appname + "/index.html");
+
+                XmlDocument xdm = new XmlDocument();
+                xdm.Load("data/settings/apps.xml");
+
+                XmlNode app = xdm.CreateElement("app");
+
+                XmlNode publisher = xdm.CreateElement("publisher");
+                publisher.InnerText = data[1];
+
+                XmlNode name = xdm.CreateElement("name");
+                name.InnerText = data[0];
+
+                XmlNode open = xdm.CreateElement("open");
+                open.InnerText = "run(index.html)";
+
+                app.AppendChild(name);
+                app.AppendChild(open);
+                app.AppendChild(publisher);
+
+                xdm.DocumentElement.AppendChild(app);
+                xdm.Save("data/settings/apps.xml");
+                MessageBox.Show(xdm.InnerXml);
+                foreach (string file in Directory.GetFiles(nameFile))
+                {
+                    File.Delete(file);
+
+                }
+                Directory.Delete(nameFile);
+            }
+        }
+
+        private void AppsGrid_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

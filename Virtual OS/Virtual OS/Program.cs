@@ -12,7 +12,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Speech;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace Virtual_OS
 {
@@ -25,9 +27,21 @@ namespace Virtual_OS
         static void Main()
         {
             Console.Title = "Virtual OS!!!";
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainSource.MotherUI());
+            Console.WriteLine("Thanks for using Virtual OS - Created by Bogdan!\r\nPress enter to start!");
+
+            Console.ReadLine();
+            //using (System.Speech.Synthesis.SpeechSynthesizer snth = new System.Speech.Synthesis.SpeechSynthesizer())
+            //{
+            //    snth.SetOutputToDefaultAudioDevice();
+            //    snth.Speak("");
+            //}
+            Thread th = new Thread(new ThreadStart(delegate {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new MainSource.MotherUI());
+            }));
+
+            th.Start();
         }
     }
 }

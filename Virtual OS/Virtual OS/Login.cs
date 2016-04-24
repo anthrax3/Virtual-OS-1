@@ -98,6 +98,8 @@ namespace Virtual_OS
             XmlDocument dataReader = new XmlDocument();
             dataReader.Load("data/user/info.xml");
 
+           
+
             dataReader.SelectSingleNode("//data");
              // Check if data is correct
             if (UsernameBox.Text == dataReader.SelectSingleNode("//username").InnerText && dataReader.SelectSingleNode("//password").InnerText == PasswordBox.Text)

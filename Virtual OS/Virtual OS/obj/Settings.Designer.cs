@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.TopBar = new System.Windows.Forms.Panel();
-            this.TitleLabel = new System.Windows.Forms.Label();
             this.CloseButton = new MetroFramework.Controls.MetroLink();
+            this.TitleLabel = new System.Windows.Forms.Label();
             this.TopBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // TopBar
             // 
             this.TopBar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.TopBar.Controls.Add(this.CloseButton);
             this.TopBar.Controls.Add(this.TitleLabel);
+            this.TopBar.Controls.Add(this.CloseButton);
             this.TopBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopBar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.TopBar.Location = new System.Drawing.Point(0, 0);
@@ -46,19 +46,10 @@
             this.TopBar.Size = new System.Drawing.Size(798, 41);
             this.TopBar.TabIndex = 0;
             // 
-            // TitleLabel
-            // 
-            this.TitleLabel.AutoSize = true;
-            this.TitleLabel.Location = new System.Drawing.Point(12, 9);
-            this.TitleLabel.Name = "TitleLabel";
-            this.TitleLabel.Size = new System.Drawing.Size(59, 17);
-            this.TitleLabel.TabIndex = 1;
-            this.TitleLabel.Text = "Settings";
-            // 
             // CloseButton
             // 
             this.CloseButton.AutoSize = true;
-            this.CloseButton.Location = new System.Drawing.Point(713, 9);
+            this.CloseButton.Location = new System.Drawing.Point(815, 8);
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Size = new System.Drawing.Size(82, 27);
             this.CloseButton.TabIndex = 5;
@@ -67,6 +58,17 @@
             this.CloseButton.UseCustomBackColor = true;
             this.CloseButton.UseSelectable = true;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
+            // TitleLabel
+            // 
+            this.TitleLabel.AutoSize = true;
+            this.TitleLabel.BackColor = System.Drawing.Color.Transparent;
+            this.TitleLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.TitleLabel.Location = new System.Drawing.Point(12, -21);
+            this.TitleLabel.Name = "TitleLabel";
+            this.TitleLabel.Size = new System.Drawing.Size(59, 17);
+            this.TitleLabel.TabIndex = 1;
+            this.TitleLabel.Text = "Settings";
             // 
             // Settings
             // 

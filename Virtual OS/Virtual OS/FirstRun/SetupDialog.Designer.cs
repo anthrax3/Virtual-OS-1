@@ -64,11 +64,12 @@
             // 
             this.CopyInfo.AutoSize = true;
             this.CopyInfo.BackColor = System.Drawing.Color.Transparent;
+            this.CopyInfo.FontSize = MetroFramework.MetroLabelSize.Small;
             this.CopyInfo.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.CopyInfo.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.CopyInfo.Location = new System.Drawing.Point(285, 13);
+            this.CopyInfo.Location = new System.Drawing.Point(285, 7);
             this.CopyInfo.Name = "CopyInfo";
-            this.CopyInfo.Size = new System.Drawing.Size(483, 20);
+            this.CopyInfo.Size = new System.Drawing.Size(431, 17);
             this.CopyInfo.Style = MetroFramework.MetroColorStyle.White;
             this.CopyInfo.TabIndex = 4;
             this.CopyInfo.Text = "Setup - VOS - Thanks For Using Virtual OS! Hope you enjoy the 1.0 beta!";
@@ -91,6 +92,7 @@
             // 
             this.UsernameLabel.AutoSize = true;
             this.UsernameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.UsernameLabel.FontSize = MetroFramework.MetroLabelSize.Small;
             this.UsernameLabel.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.UsernameLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.UsernameLabel.Location = new System.Drawing.Point(379, 210);
@@ -106,11 +108,12 @@
             // 
             this.PasswordLabel.AutoSize = true;
             this.PasswordLabel.BackColor = System.Drawing.Color.Transparent;
+            this.PasswordLabel.FontSize = MetroFramework.MetroLabelSize.Small;
             this.PasswordLabel.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.PasswordLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.PasswordLabel.Location = new System.Drawing.Point(379, 275);
+            this.PasswordLabel.Location = new System.Drawing.Point(379, 278);
             this.PasswordLabel.Name = "PasswordLabel";
-            this.PasswordLabel.Size = new System.Drawing.Size(74, 20);
+            this.PasswordLabel.Size = new System.Drawing.Size(67, 17);
             this.PasswordLabel.TabIndex = 9;
             this.PasswordLabel.Text = "Password:";
             this.PasswordLabel.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -121,7 +124,7 @@
             // 
             this.ShowPass.AutoSize = true;
             this.ShowPass.DisplayStatus = false;
-            this.ShowPass.Location = new System.Drawing.Point(679, 299);
+            this.ShowPass.Location = new System.Drawing.Point(696, 309);
             this.ShowPass.Name = "ShowPass";
             this.ShowPass.Size = new System.Drawing.Size(50, 21);
             this.ShowPass.TabIndex = 11;
@@ -134,11 +137,12 @@
             // 
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Small;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.metroLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.metroLabel1.Location = new System.Drawing.Point(625, 298);
+            this.metroLabel1.Location = new System.Drawing.Point(625, 308);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(48, 20);
+            this.metroLabel1.Size = new System.Drawing.Size(42, 17);
             this.metroLabel1.TabIndex = 9;
             this.metroLabel1.Text = "Show:";
             this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -154,7 +158,7 @@
             // 
             // PasswordBox
             // 
-            this.PasswordBox.Location = new System.Drawing.Point(379, 298);
+            this.PasswordBox.Location = new System.Drawing.Point(379, 308);
             this.PasswordBox.Name = "PasswordBox";
             this.PasswordBox.Size = new System.Drawing.Size(240, 22);
             this.PasswordBox.TabIndex = 12;
@@ -162,7 +166,7 @@
             // 
             // NameBox
             // 
-            this.NameBox.Location = new System.Drawing.Point(379, 363);
+            this.NameBox.Location = new System.Drawing.Point(379, 373);
             this.NameBox.Name = "NameBox";
             this.NameBox.Size = new System.Drawing.Size(125, 22);
             this.NameBox.TabIndex = 14;
@@ -171,11 +175,12 @@
             // 
             this.RealNameLabel.AutoSize = true;
             this.RealNameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.RealNameLabel.FontSize = MetroFramework.MetroLabelSize.Small;
             this.RealNameLabel.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.RealNameLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.RealNameLabel.Location = new System.Drawing.Point(379, 340);
+            this.RealNameLabel.Location = new System.Drawing.Point(379, 343);
             this.RealNameLabel.Name = "RealNameLabel";
-            this.RealNameLabel.Size = new System.Drawing.Size(178, 20);
+            this.RealNameLabel.Size = new System.Drawing.Size(157, 17);
             this.RealNameLabel.TabIndex = 13;
             this.RealNameLabel.Text = "Real Name And Surname:";
             this.RealNameLabel.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -184,7 +189,7 @@
             // 
             // SurnameBox
             // 
-            this.SurnameBox.Location = new System.Drawing.Point(510, 363);
+            this.SurnameBox.Location = new System.Drawing.Point(510, 373);
             this.SurnameBox.Name = "SurnameBox";
             this.SurnameBox.Size = new System.Drawing.Size(109, 22);
             this.SurnameBox.TabIndex = 15;
