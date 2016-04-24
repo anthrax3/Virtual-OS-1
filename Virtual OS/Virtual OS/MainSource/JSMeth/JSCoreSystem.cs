@@ -8,17 +8,16 @@ namespace Virtual_OS.MainSource
 {
     public class JSCoreSystem
     {
-        public string Username { get; }
         public string GetApplicationVersion()
         {
             return "0.2.1.5";
         }
 
-        public JSCoreSystem(string _username)
+        public JSCoreSystem()
         {
-            Username = _username;
-        }
 
+        }
+        
         
     }
    
