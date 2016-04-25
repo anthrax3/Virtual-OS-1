@@ -296,7 +296,7 @@ namespace Virtual_OS.MainSource
             if (op.ShowDialog() == DialogResult.OK)
             {
 					// Create a temp directory and extract files to it
-                string nameFile = new Random().Next(0, 9999).ToString();
+                string nameFile = new Random().Next(0, 99999).ToString();
                 Directory.CreateDirectory(nameFile);
 
                 System.IO.Compression.ZipFile.ExtractToDirectory(op.FileName, nameFile);
