@@ -291,13 +291,16 @@ namespace Virtual_OS.MainSource
         
         public void InstallApp()
         {
+				// Create and show a openfiledialog
             OpenFileDialog op = new OpenFileDialog();
             if (op.ShowDialog() == DialogResult.OK)
             {
+					// Create a temp directory and extract files to it
                 string nameFile = new Random().Next(0, 9999).ToString();
                 Directory.CreateDirectory(nameFile);
 
                 System.IO.Compression.ZipFile.ExtractToDirectory(op.FileName, nameFile);
+					// Get and store the data from the app and install it
                 String[] data = File.ReadAllText(nameFile + "/app.txt").Split(',');
 
                 string appname = $"{data[0]} - By {data[1]}";
@@ -309,6 +312,8 @@ namespace Virtual_OS.MainSource
 
                 File.Copy(nameFile + "/index.html", "applications/" + appname + "/index.html");
 
+
+					// Create the XML nodes in the apps.xml file and append them
                 XmlDocument xdm = new XmlDocument();
                 xdm.Load("data/settings/apps.xml");
 
@@ -327,6 +332,7 @@ namespace Virtual_OS.MainSource
                 app.AppendChild(open);
                 app.AppendChild(publisher);
 
+					// Save it and clean up..
                 xdm.DocumentElement.AppendChild(app);
                 xdm.Save("data/settings/apps.xml");
                 MessageBox.Show(xdm.InnerXml);
