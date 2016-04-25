@@ -38,7 +38,7 @@ namespace Virtual_OS.MainSource
             dataReader.Load("data/user/info.xml");
 
             dataReader.SelectSingleNode("//data");
-
+            // More dpi fixes
             this.DoubleBuffered = true;
 
             this.AutoScaleMode = AutoScaleMode.None;
@@ -47,7 +47,7 @@ namespace Virtual_OS.MainSource
             string surname = dataReader.SelectSingleNode("//last").InnerText;
             PersonName = name;
             LastName = surname;
-
+			  // Set the welcome label
             WelcomeLabel.Text = $"Welcome, Mr. {PersonName} {LastName}!";
 
             this.Load += MotherUI_Load;
